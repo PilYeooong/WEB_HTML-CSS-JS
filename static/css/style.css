@@ -1,5 +1,4 @@
 
-
 /* -------------- header -------------------- */
 
 header{
@@ -14,7 +13,7 @@ section{
     border:0.5px solid #e6e6e6;
 }
 .container{
-    height:1000px;
+    height:850px;
     width:100%;
     /* background:green; */
     /* border:1px solid #e6e6e6; */
@@ -38,7 +37,7 @@ section{
 }
 
 #header .container{
-    height:600px;
+    height:700px;
 }
 
 #header .container .header-top{
@@ -85,27 +84,87 @@ section{
     justify-content: center;
     align-items: center;
 }
-/* ----------------------- Content Section ------------------------- */
 
-section .about{
+/* ----------------------------------------------------------- */
+.content-box .content-title .section-icon:before{
+    background-color: #91328f;
+    content:"";
+    position: absolute;
+    height:1px;
+    width:120px;
+    top:6px;
+    z-index:-1;
+}
+.content-box .content-title .section-icon{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    width:100%;
+}
+
+section .content-box{
     display:flex;
     flex-direction: column;
     height: 100%;
 }
 
-section .about .content-title{
+section .content-box .content-title{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height:30%;
     /* padding-bottom: 60px; */
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-section .about .content{
+/* ----------------------- Content Section ------------------------- */
+
+
+section#about .content-box .content{
     display:flex;
     justify-content: center;
-    font-size: 18px;
+    font-size: 14px;
     height:70%;
+}
+
+section#about .content-box .content .about-img img{
+    width:90%;
+    height:70%;
+    border-radius: 50px;
+}
+
+section#about .content-box .content .about-text{
+    display:flex;
+    height:70%;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+section#about .content-box .content .about-text p{
+    margin-top: 15px;
+    color:#b0aeae;
+}
+
+section#about .content-box .content button{
+    width:30%;
+    background:#fff;
+    border:1px solid #853bfe;
+    font-size: 15px;
+    padding:10px 10px;
+    margin-top: 40px;
+}
+
+/* ---------------------services---------------------- */
+
+section#services .content-box{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section#services .content-box .content-title{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
