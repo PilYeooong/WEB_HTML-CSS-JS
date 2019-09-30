@@ -194,11 +194,11 @@ section#about .content-box .content button{
   }
     
 @keyframes fade{
-    from{opacity: .4}
+    from{opacity: .2}
     to{opacity: 1} 
 }
 @-webkit-keyframes fade{
-    from{opacity: .4}
+    from{opacity: .2}
     to{opacity: 1}
 }
 
@@ -286,9 +286,24 @@ section#portfolio .button-group button.button {
     background: #fff;
 }
 
+section#portfolio .button-group button.button.is-checked{
+    position:relative;
+    color: #7c2dfe;
+}
+
+section#portforli .button.is-checked::before {
+    background: #7c2dfe none repeat scroll 0 0;
+    bottom: 3px;
+    content: "";
+    height: 3px;
+    left: 25%;
+    position: absolute;
+    width: 50%;
+}
+
 section#portfolio .grid{
     position: relative;
-    height:90%;
+    height:990px;
 }
 
 .portfolio-item img{
