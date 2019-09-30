@@ -2,7 +2,7 @@
 /* -------------- header -------------------- */
 
 header{
-    border:0.5px solid #e6e6e8;
+    /* border:0.5px solid #e6e6e8; */
     /* background:rgba(0.0.) */
 }
 
@@ -32,12 +32,18 @@ section{
     background-image: url('../imgs/img01.jpg'); 
     width: 100%;
     height: 100%;
-    opacity : 0.6;
+    opacity : 0.5;
     z-index: -1;
 }
 
+.wrapper .content-title > h2 {
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Raleway', sans-serif;
+}
+
 #header .container{
-    height:700px;
+    height:770px;
 }
 
 #header .container .header-top{
@@ -52,14 +58,14 @@ section{
     justify-content: center;
     align-items: center;
     width:30%;
-    border:1px solid #e6e6e6;
+    /* border:1px solid #e6e6e6; */
     padding-bottom: 25px;
     padding-right: 25px;
 }
 
 #header .container nav{
     display:flex;
-    border:1px solid #e6e6e6;
+    /* border:1px solid #e6e6e6; */
     flex-direction: column;
     justify-content: center;
     width:70%;
@@ -75,7 +81,7 @@ section{
 }
 
 #header .container .header-bottom{
-    border: 1px solid #e6e6e6;
+    /* border: 1px solid #e6e6e6; */
     height:70%;
 }
 
@@ -83,6 +89,8 @@ section{
     display:flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    margin:auto;
 }
 
 /* ----------------------------------------------------------- */
@@ -100,6 +108,7 @@ section{
     display:flex;
     justify-content: center;
     width:100%;
+    z-index:100;
 }
 
 section .content-box{
@@ -116,6 +125,10 @@ section .content-box .content-title{
     height:30%;
     /* padding-bottom: 60px; */
     margin-bottom: 20px;
+}
+
+section .content-box .content{
+    height:70%;
 }
 
 /* ----------------------- Content Section ------------------------- */
@@ -156,8 +169,43 @@ section#about .content-box .content button{
     margin-top: 40px;
 }
 
-/* ---------------------services---------------------- */
+#header .header-bottom .imageslide{
+    width:100%;
+    height:100%;
+}
 
+.imageslide{
+    /* display: none; */
+    text-align: center;
+    margin-top: 10%;
+}
+
+.imageslide img{
+    border-radius: 5px;
+    width:80%;
+    height:80%;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+  }
+    
+@keyframes fade{
+    from{opacity: .4}
+    to{opacity: 1} 
+}
+@-webkit-keyframes fade{
+    from{opacity: .4}
+    to{opacity: 1}
+}
+
+/* ---------------------services---------------------- */
+section#services{
+    background:#f7f7f7;
+}
 section#services .content-box{
     display:flex;
     flex-direction: column;
@@ -167,4 +215,83 @@ section#services .content-box .content-title{
     display:flex;
     flex-direction: column;
     justify-content: center;
+}
+
+section#services .container .content-box .content{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+section#services .servicebox{
+    height:50%;
+    display:flex;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.servicebox .service {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width:33.33333%;
+}
+
+.servicebox .service i{
+    border:5px solid #f4ddf8;
+}
+.servicebox .service a{
+    font-size: 70px;
+    color:#000;
+    /* background:#7c2dfe; */
+    border-radius: 100%;
+    width:30%;
+    height:30%;
+}
+
+.servicebox .service p{
+    margin-left:20px;
+}
+
+
+/* ------------------------------------------------------- */
+
+section#portfolio .container{
+    height:1100px;
+}
+
+section#portfolio .content-title{
+    height:200px;
+}
+
+section#portfolio .content{
+    height:800px;
+}
+
+section#portfolio .button-group{
+    display:flex;
+    justify-content: center;
+    height:5%;
+    margin-bottom: 50px;
+}
+section#portfolio .button-group button.button {
+    border: medium none;
+    color: #3f3f3f;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-right: 8px;
+    padding: 13px 20px;
+    background: #fff;
+}
+
+section#portfolio .grid{
+    position: relative;
+    height:90%;
+}
+
+.portfolio-item img{
+    width:300px;
+    height:270px;
 }
