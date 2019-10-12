@@ -310,7 +310,7 @@ section#services .servicebox{
 /* --------------------------portfolio section----------------------------- */
 
 section#portfolio .container{
-    height:1100px;
+    height:1000px;
 }
 
 section#portfolio .content-title{
@@ -386,8 +386,15 @@ section#contact .content{
     font-size: 20px;
 }
 
-
+@media screen and (max-width:991px){
+    section#portfolio{
+        height: 1200px;
+    }
+}
 @media screen and (max-width:800px){
+    #header .floating_menu {
+        left:91%;
+    }
 
     #header .header-menu-btn{
         display: block;
@@ -422,13 +429,23 @@ section#contact .content{
         top:140px;
         left: 40px;
     }
+
+    section#portfolio{
+        height:1200px;
+    }
 }
 
 @media screen and (max-width:600px){
-
+    section .content-title{
+        margin-left: 15px;
+    }
+    #header .floating_menu {
+        left:90%;
+    }
     section#about{
         height:1000px;
     }
+
     section#about .content-box{
         display:flex;
         flex-direction: column;
@@ -445,13 +462,14 @@ section#contact .content{
     } 
 
     section#about .content-box .content img{
-        padding-left: 25px;
+        text-align: center;
+        margin-left: 30px;
     }
     section#about .content-box .content button{
         display:none;
     }
     section#services{
-        height:1400px;
+        height:1450px;
     }
     section#services .servicebox{
         height: 800px;
@@ -471,21 +489,72 @@ section#contact .content{
     } */
 
     section#portfolio {
-        height:1500px;
+        height:1400px;
     }
 
     section#portfolio .grid{
-        margin-left: 50px;
+        margin-left: 90px;
     }
-    
-   
 }
   
-@media screen and(max-width:800px){
-
-    section#portfolio .grid{
-        margin-left: 80px;
+@media screen and (max-width:440px){
+    section#portfolio {
+        height:2500px;
     }
-   
+    section#portfolio .grid{
+        margin-left: 82px;
+    }
 }
 
+@media screen and (max-width:365px){
+
+    #header .container .logo{
+        display: none;
+    }
+    section#portfolio .content-title{
+        margin-left: 20px;
+    }
+
+    section#portfolio .button-group{
+        margin-left: 20px;
+        margin-bottom: 143px;
+    }
+    section#portfolio .grid{
+        margin-top: 15px;
+        margin-left: 38px;
+    }
+}
+
+@media screen and (max-width:275px){
+    section#about .content-box .content img{
+        text-align: center;
+        margin-left: 10px;
+    }
+    section#about .content-box .about-text{
+        margin-top: 50px;
+    } 
+
+    section#services .servicebox{
+        margin-left: 0px;
+        margin-right: 3px;
+    }
+
+    section#services .servicebox .service a{
+        margin-left:12px; 
+    }
+
+    section#portfolio {
+        height:2660px;
+    }
+
+    section#portfolio .grid{
+        margin-top: 15px;
+        margin-left: 18px;
+    }
+
+    section#portfolio .button-group{
+        margin-left: 20px;
+        margin-bottom: 230px;
+    }
+
+}
