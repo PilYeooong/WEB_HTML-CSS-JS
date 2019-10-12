@@ -1,4 +1,9 @@
 
+/* 반응형 적용시 옆에 빈공백 생기는현상 해결 */
+html, body {
+    width: auto !important;
+    overflow-x: hidden !important;
+  }
 /* -------------- header -------------------- */
 
 header{
@@ -16,7 +21,7 @@ section{
 }
 .container{
     height:850px;
-    width:100%;
+    width: 100%;
     /* background:green; */
     /* border:1px solid #e6e6e6; */
 }
@@ -45,6 +50,10 @@ section{
     font-size: 40px;
     font-weight: 800;
     font-family: 'Raleway', sans-serif;
+}
+
+#header .header-menu-btn{
+    display:none;
 }
 
 #header .floating_menu{
@@ -77,6 +86,7 @@ section{
 #header .container .header-top{
     display:flex;
     height:30%;
+    font-weight: 500;
 }
 
 #header .container .logo{
@@ -89,6 +99,7 @@ section{
     /* border:1px solid #e6e6e6; */
     padding-bottom: 25px;
     padding-right: 25px;
+    margin-right: 80px;
 }
 
 #header .container nav{
@@ -119,6 +130,17 @@ section{
     align-items: center;
     position: relative;
     margin:auto;
+}
+.typer-text{
+    font-family: 'Noto Sans KR', sans-serif;
+    border-right: 0.1em solid white;
+    font-size: 4vw;
+    white-space: pre;
+    line-height: 1;
+    letter-spacing: 0.1rem;
+    padding-top: 0.2em;
+    -webkit-animation: blink 1s step-end infinite;
+            animation: blink 1s step-end infinite;
 }
 
 /* ----------------------------------------------------------- */
@@ -252,9 +274,11 @@ section#services .container .content-box .content{
 }
 
 section#services .servicebox{
+    display:block;
     height:50%;
     display:flex;
     justify-content: space-between;
+    flex-wrap:  wrap;   
     margin-left: 20px;
 }
 
@@ -298,8 +322,7 @@ section#portfolio .content{
 }
 
 section#portfolio .button-group{
-    display:flex;
-    justify-content: center;
+    text-align: center;
     height:5%;
     margin-bottom: 50px;
 }
@@ -319,7 +342,7 @@ section#portfolio .button-group button.button.is-checked{
     color: #7c2dfe;
 }
 
-section#portforli .button.is-checked::before {
+section#portfolio .button.is-checked::before {
     background: #7c2dfe none repeat scroll 0 0;
     bottom: 3px;
     content: "";
@@ -334,10 +357,18 @@ section#portfolio .grid{
     height:990px;
 }
 
-.portfolio-item img{
-    width:300px;
-    height:270px;
+.portfolio-item{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.portfolio-item img{
+    width:180px;
+    height:170px;
+}
+
+
 /* ---------------------contact section-------------------- */
 
 section#contact{
@@ -354,3 +385,107 @@ section#contact .content{
     align-items: center;
     font-size: 20px;
 }
+
+
+@media screen and (max-width:800px){
+
+    #header .header-menu-btn{
+        display: block;
+        font-size: 35px;
+        cursor: pointer;
+    }
+
+    #header .container .header-top{
+        display:flex;
+        align-items: center;
+    }
+    
+    #header .container .logo{
+        position: absolute;
+        left:40%;
+        /* transform: translate(-50%, -50%); */
+    }
+    #header .container nav{
+        display:none;
+    }
+    body.menu-on {
+        overflow: hidden;
+        height: 100%;
+    }
+    body.menu-on #header .container nav{
+        display:block;
+    }
+    body.menu-on #header .container ul{
+        display:flex;
+        flex-direction: column;
+        position: absolute;
+        top:140px;
+        left: 40px;
+    }
+}
+
+@media screen and (max-width:600px){
+
+    section#about{
+        height:1000px;
+    }
+    section#about .content-box{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    section#about .content-box .content{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 13px;
+        height:70%;
+    } 
+
+    section#about .content-box .content img{
+        padding-left: 25px;
+    }
+    section#about .content-box .content button{
+        display:none;
+    }
+    section#services{
+        height:1400px;
+    }
+    section#services .servicebox{
+        height: 800px;
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .servicebox .service{
+        height : 180px;
+        display:flex;
+        justify-content: space-between;
+        width: inherit;
+        margin-bottom: 20px;
+    }
+    /* section#services .servicebox .service p{
+        display:none;
+    } */
+
+    section#portfolio {
+        height:1500px;
+    }
+
+    section#portfolio .grid{
+        margin-left: 50px;
+    }
+    
+   
+}
+  
+@media screen and(max-width:800px){
+
+    section#portfolio .grid{
+        margin-left: 80px;
+    }
+   
+}
+
