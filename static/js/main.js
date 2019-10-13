@@ -1,4 +1,12 @@
 
+(function() {
+
+    var menuBtn = document.querySelector('.header-menu-btn');
+
+    menuBtn.addEventListener('click', function() {
+        document.body.classList.toggle('menu-on');
+    });
+})();
 // ----------------Menu scrolling-----------------
     function gototop(){
         var offset = $("#header").offset();
