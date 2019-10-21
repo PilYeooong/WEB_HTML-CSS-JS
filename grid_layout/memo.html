@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="memo.css">
+    <style>
+        .wow{
+            background-color: orange;
+            width:50%;
+            padding:20px;
+            box-sizing: border-box;
+            /* width 50%적용 상태에서 패딩을 적용하면 50%가 깨지게된다 그럴떄 이용하는게 box-sizing: ; */
+        }
+        .container{
+            /* background-color: orange; */
+            padding: 10px;
+            margin: 0 ;
+            transition: all .5s;
+        }
+        .container:hover{
+            margin-left: -20px;
+            margin-right: -20px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.2); 
+            /* 그림자 지는 효과를 볼수잇음 */
+        }
+        h1{
+            text-align: center;
+        }
+        .wrapper{
+            width:660px;
+            margin: 50px auto;
+            background-color: yellow;
+            border: 10px solid black;
+            /* overflow: hidden;  */
+        }
+        .wrapper::after{
+            content: '';
+            background-color: red;
+            display: block;
+            clear: both;
+        }
+        .box{
+            width:200px;
+            margin:10px;
+            height:200px;
+            line-height: 200px;
+            background-color: skyblue;
+            font-size: 100px;
+            color: white;
+            text-align: center;
+            float:left; 
+            /* 부모의 높이를 무시한다는 단점 ,부모에게 overflow: hidden; 으로 보완 , after속성 clear사용 */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="wow">
+        wow
+    </div>
+    <div class="container">
+        box
+    </div>
+
+    <div class="wrapper">
+        <h1>float grid</h1>
+        <div class="box">1</div>
+        <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum laborum dolorum optio 
+            dolores reiciendis similique ea aliquid, rem dolore eum quidem eligendi? Repudiandae tenetur non deleniti culpa autem modi voluptates recusandae eius magni amet nam, suscipit provident nemo soluta voluptate ullam quam voluptas dicta eos quasi perferendis. Quae, laudantium hic minus neque deleniti ex eligendi illo dolores est sed facere deserunt repellat laboriosam mollitia a numquam libero voluptates doloremque sequi adipisci. Ipsa magni veniam eos porro id facere fugiat aut, impedit a, nulla vel voluptatibus delectus cupiditate pariatur consequuntur consequatur, atque libero vitae mollitia. Optio fugiat numquam qui deserunt quibusdam!</p> -->
+        <div class="box">1</div>
+        <div class="box">1</div>
+    </div>
+    <div class="l_wrapper">
+        123
+        <ul class="l_row">
+            <li class="l_col l_col_4_12">
+                <div class="item">
+                    A
+                </div>
+            </li>
+            <li class="l_col l_col_4_12">
+                <div class="item">
+                    A
+                </div>
+            </li>
+            <li class="l_col l_col_4_12">
+                <div class="item">
+                    A
+                </div>
+            </li>
+            <li class="l_col l_col_6_12">
+                <div class="item">
+                    A
+                </div>
+            </li>
+            <li class="l_col l_col_6_12">
+                <div class="item">
+                    A
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
