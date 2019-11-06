@@ -1,3 +1,10 @@
+a{
+    text-decoration: none;
+    color: #333;
+}
+a.on{
+    color:red;
+}
 ul{
     margin:0;
 }
@@ -62,20 +69,41 @@ header .menu{
     /* padding:10px; */
     /* background: rgba(255,0,0,0.5); */
     /* margin-left: 3px; */    
+    position: relative;
     transition: all .4s;
     box-shadow: 0 0 40px rgba(0,0,0,0.2);
     height:100%;
-}
-
-.item:hover{
-    margin-left: -10px;
-    margin-right: -10px;
+    background-color: black;
+    color:#fff;
 }
 
 .item img{
     width:100%;
     height:100%;
+    transition: all .6s;
 }
+
+.item p{
+    position: absolute;
+    transition:all .3s;
+    opacity: 0;
+}
+
+/* .item:hover {
+    margin-left: -10px;
+    margin-right: -10px;
+} */
+section .item:hover p{
+    opacity: 1;
+    top:50%;
+    left:25%;
+    /* transform:scale(1); */
+}
+
+section .item:hover img{
+    opacity: 0;
+}
+
 
 
 /* .col:nth-child(1){
